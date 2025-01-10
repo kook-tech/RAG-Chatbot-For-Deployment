@@ -1,4 +1,3 @@
-from dotenv import load_dotenv
 import streamlit as st
 from llm import get_ai_response
 
@@ -11,7 +10,6 @@ st.title("🤖 Onion DataCenter Chatbot")
 st.caption("데이터센터에 관련된 모든것을 답해드립니다!")
 
 
-load_dotenv()
 
 
 if 'message_list' not in st.session_state:

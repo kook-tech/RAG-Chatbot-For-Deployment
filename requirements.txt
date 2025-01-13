@@ -14,13 +14,16 @@ click==8.1.8
 dataclasses-json==0.6.7
 distro==1.9.0
 exceptiongroup==1.2.2
+filelock==3.16.1
 frozenlist==1.5.0
+fsspec==2024.12.0
 gitdb==4.0.12
 GitPython==3.1.44
 h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
 httpx-sse==0.4.0
+huggingface-hub==0.27.1
 idna==3.10
 iniconfig==2.0.0
 Jinja2==3.1.5
@@ -32,10 +35,11 @@ jsonschema-specifications==2024.10.1
 langchain==0.3.14
 langchain-community==0.3.14
 langchain-core==0.3.29
-langchain-openai==0.2.14
+langchain-openai==0.3.0
 langchain-pinecone==0.2.0
 langchain-tests==0.3.7
 langchain-text-splitters==0.3.5
+langchain-upstage==0.6.0
 langsmith==0.2.10
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
@@ -51,8 +55,8 @@ packaging==24.2
 pandas==2.2.3
 pillow==11.1.0
 pinecone==5.4.2
-pinecone-plugin-inference>=2.0.0,<4.0.0
-pinecone-client>=5.0.0,<6.0.0
+pinecone-client==5.0.1
+pinecone-plugin-inference==1.1.0
 pinecone-plugin-interface==0.0.7
 pluggy==1.5.0
 propcache==0.2.1
@@ -63,6 +67,7 @@ pydantic-settings==2.7.1
 pydantic_core==2.27.2
 pydeck==0.9.1
 Pygments==2.19.1
+pypdf==4.3.1
 pytest==8.3.4
 pytest-asyncio==0.25.2
 pytest-socket==0.7.0
@@ -84,6 +89,7 @@ streamlit==1.41.1
 syrupy==4.8.0
 tenacity==9.0.0
 tiktoken==0.8.0
+tokenizers==0.19.1
 toml==0.10.2
 tomli==2.2.1
 tornado==6.4.2

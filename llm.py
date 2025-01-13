@@ -22,7 +22,7 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 def get_retriever():
     embedding = OpenAIEmbeddings(model='text-embedding-3-large')
-    index_name = 'datacenter-index'
+    index_name = 'datacenter-demo-index'
     database = PineconeVectorStore.from_existing_index(embedding=embedding, index_name=index_name)
     retriever = database.as_retriever(search_kwags={'k' : 4}) 
     return retriever

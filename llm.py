@@ -11,6 +11,9 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from config import answer_example
+from langchain_upstage import UpstageEmbeddings
+from langchain_upstage import ChatUpstage
+
 store = {}
 
 
@@ -21,15 +24,15 @@ def get_session_history(session_id: str) -> BaseChatMessageHistory:
 
 
 def get_retriever():
-    embedding = OpenAIEmbeddings(model='text-embedding-3-large')
-    index_name = 'datacenter-index'
+    embedding = upstage_embedding =  UpstageEmbeddings(model="embedding-query")  
+    index_name = 'datacenter-upstage-test-index'
     database = PineconeVectorStore.from_existing_index(embedding=embedding, index_name=index_name)
     retriever = database.as_retriever(search_kwags={'k' : 4}) 
     return retriever
 
 
-def get_llm(model='gpt-4o'):
-    llm = ChatOpenAI(model='gpt-4o')    
+def get_llm(model="solar-pro"):
+    llm =  ChatUpstage(model="solar-pro", temperature=0)
     return llm
 
 
